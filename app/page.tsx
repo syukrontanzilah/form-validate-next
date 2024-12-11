@@ -13,6 +13,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-7">Contact us</h1>
       <Card className="max-w-[500px] w-full">
         <Tabs defaultValue="sales">
+          {/* Tab 1 */}
           <CardContent className="mt-5">
             <TabsList className="grid grid-cols-2">
               <TabsTrigger value="sales">Talk to Sales</TabsTrigger>
@@ -30,12 +31,36 @@ export default function Home() {
                   <Input placeholder="Input Name" />
                 </div>
                 <div className="grid space-y-1">
-                  <Label >Email</Label>
+                  <Label>Email</Label>
                   <Input type="email" placeholder="Email" />
                 </div>
                 <div className="grid space-y-2">
                   <Label>Question or problem</Label>
-                  <Textarea className="h-32" placeholder="Please share some details about your needs.."/>
+                  <Textarea
+                    className="h-32"
+                    placeholder="Please share some details about your needs.."
+                  />
+                </div>
+                <Button>Submit</Button>
+              </form>
+            </TabsContent>
+            {/* Tab 2 */}
+            <TabsContent value="support">
+              <div className="text-foreground text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur, inventore atque earum nostrum corporis.
+              </div>
+              <form className="flex flex-col gap-y-4 mt-5">
+                <div className="grid space-y-1">
+                  <Label>Name</Label>
+                  <Input className="" placeholder="Name"/>
+                </div>
+                <div className="grid space-y-1">
+                  <Label>Email</Label>
+                  <Input className="" placeholder="Email"/>
+                </div>
+                <div className="grid space-y-2">
+                  <Label>Problem</Label>
+                  <Textarea className="h-32" placeholder="What is wrong?"/>
                 </div>
                 <Button>Submit</Button>
               </form>
