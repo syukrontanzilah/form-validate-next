@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
+import { TalkToSalesAction } from "./actions";
+import { SubmitButton } from "./components/SubmitButton";
 
 export default function Home() {
   return (
@@ -25,9 +27,11 @@ export default function Home() {
                 You want to integrate your product with us? we can help you
                 please contact us down below!
               </div>
-              <form action={"https://getform.io/f/agddqoob"} className="flex flex-col gap-y-4 mt-5"
-              method="POST"
+              <form 
+              action={TalkToSalesAction}
+              className="flex flex-col gap-y-4 mt-5"
               >
+                <input type="hidden" name="_gotcha"/>
                 <div className="grid space-y-1">
                   <Label>Name</Label>
                   <Input type="text" name="name" placeholder="Input Name" />
@@ -44,7 +48,8 @@ export default function Home() {
                     placeholder="Please share some details about your needs.."
                   />
                 </div>
-                <Button type="submit">Submit</Button>
+                {/* <Button type="submit">Submit</Button> */}
+                <SubmitButton/>
               </form>
             </TabsContent>
             {/* Tab 2 */}
@@ -53,6 +58,7 @@ export default function Home() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur, inventore atque earum nostrum corporis.
               </div>
               <form className="flex flex-col gap-y-4 mt-5">
+              <input type="hidden" name="_gotcha"/>
                 <div className="grid space-y-1">
                   <Label>Name</Label>
                   <Input className="" placeholder="Name"/>
