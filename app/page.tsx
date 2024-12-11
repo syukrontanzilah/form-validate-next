@@ -25,23 +25,26 @@ export default function Home() {
                 You want to integrate your product with us? we can help you
                 please contact us down below!
               </div>
-              <form className="flex flex-col gap-y-4 mt-5">
+              <form action={"https://getform.io/f/agddqoob"} className="flex flex-col gap-y-4 mt-5"
+              method="POST"
+              >
                 <div className="grid space-y-1">
                   <Label>Name</Label>
-                  <Input placeholder="Input Name" />
+                  <Input type="text" name="name" placeholder="Input Name" />
                 </div>
                 <div className="grid space-y-1">
                   <Label>Email</Label>
-                  <Input type="email" placeholder="Email" />
+                  <Input type="email" name="email" placeholder="Email" />
                 </div>
                 <div className="grid space-y-2">
                   <Label>Question or problem</Label>
                   <Textarea
+                    name="message"
                     className="h-32"
                     placeholder="Please share some details about your needs.."
                   />
                 </div>
-                <Button>Submit</Button>
+                <Button type="submit">Submit</Button>
               </form>
             </TabsContent>
             {/* Tab 2 */}
@@ -58,9 +61,13 @@ export default function Home() {
                   <Label>Email</Label>
                   <Input className="" placeholder="Email"/>
                 </div>
-                <div className="grid space-y-2">
+                <div className="grid space-y-1">
                   <Label>Problem</Label>
                   <Textarea className="h-32" placeholder="What is wrong?"/>
+                </div>
+                <div className="grid space-y-1">
+                  <Label>Asset</Label>
+                  <Input type="file"/>
                 </div>
                 <Button>Submit</Button>
               </form>
